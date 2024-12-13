@@ -1,0 +1,464 @@
+<html>
+    <head>
+<title>Foodmandu</title>
+<link rel="stylesheet"href="foodmandu.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+          
+         <!----===============================START OF HEADER SECTION=======================================-->
+         <header id="header">
+            <div class="wrapper">
+            <div class="logo"><a href="foodmandu.html"><img src="Images-Foodmandu/logo-n.png" alt="foodmandu" height="30" width="168.38" ></a></div>
+            <nav>
+                <div class="Login">
+                  <a href="First-form.html">
+                <button id="login-btn" class="my-button"style=" padding: 5px 15px;" >Login</button>
+                </a>
+                </div>
+            </nav>
+            </div>
+            </header>
+            <!--=========================END OF HEADER SECTION=========================-->
+
+            <!---=============================START OF THE MAIN SECTION=========================------------------->
+            <section class="section-1">
+              <div class="container-first">
+                <div class="search-row">
+                    <h2 class="text-center">Order food from the widest range of restaurants.</h2>
+                    <div class="search-r">
+                      <a href="/Views/Home/Index.cshtml"></a>
+                      <div class="search-bar">
+                        <input type="search"class="searching" placeholder="Restaurant or Cuisine (leave it blank to browse all)"id="search-input">
+                      </div>
+                      <div class="button-front">
+                        <button class="btn-first">
+                        <span class="txt">Find Restaurants</span>
+                        </button>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="container-second">
+                <img class="img-1" src="Images-Foodmandu/tandoori_chicken.png" alt="tandoori_chicken">
+                <img class="img-2" src="Images-Foodmandu/flanksteak_cheddar.png" alt="steak">
+                <img class="img-3" src="Images-Foodmandu/flanksteak_cheddar.png" alt="steak">
+                <img class="img-4"src="Images-Foodmandu/salmon-plate.png" alt="salmon">
+
+              </div>
+              <!-- <script>
+                const searchInput = document.getElementById('search-input');
+                const images = document.querySelectorAll('.container-second img');
+              
+                searchInput.addEventListener('focus', () => {
+                  images.forEach((img) => {
+                    img.style.transform = "scale(1.2)";
+                  });
+                });
+              
+                searchInput.addEventListener('blur', () => {
+                  images.forEach((img) => {
+                    img.style.transform = "scale(1)";
+                  });
+                });
+              </script> -->
+              <script>
+  const searchInput = document.getElementById('search-input');
+  const images = document.querySelectorAll('.container-second img');
+
+  let previousTransforms = [];
+
+  searchInput.addEventListener('focus', () => {
+    images.forEach((img, index) => {
+      previousTransforms[index] = img.style.transform;
+      img.style.transform = "scale(1.1)";
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.target !== searchInput) {
+      images.forEach((img, index) => {
+        img.style.transform = previousTransforms[index];
+      });
+      previousTransforms = []; // reset the array
+    }
+  });
+</script>
+              </script>
+            </section>
+            <!-- ================================FOODMANDU__FRESH____SECTION=============================== -->
+
+            <section class="Section-2">
+                <div class="container">
+                    <div class="img-text-1">
+                    <div class="food-fresh">
+                    <h1 class="one-line">FOODMANDU FRESH</h1>
+                    <img class="img-div" src="Images-Foodmandu/Foodmandu-Fresh.jpg" alt="FOODMANDU FRESH">
+                    </div>
+                </div>
+                </div>
+            </section>
+            <br>
+            <!-- ====================================END__OF__FOODMANDU__FRESH____SECTION========================================== -->
+
+            <!-- ==============================FEATURED___RESTUARANT___SECTION================================================= -->
+            <section class="Section-3" style="border: 1px solid #E7E7E7;border-width: 1px 0 0 0;width:100%">
+                <div class="container-1">
+                    <div class="rows">
+                      <div class="inline">
+                      <h1 class="two-line">FEATURED RESTAURANTS</h1>
+                      <small class="float-right">
+                        <a href="view-all1.html"style="color:black;">
+                          View all
+                          <span class="icomoon-icon-arrow-forward">
+                            <i class="fa-solid fa-arrow-right" style="color: black;"></i>
+                          </span><!-- move the href attribute to this anchor tag -->
+                      </a>
+                      </small>
+                      </div>
+                      <div class="food-row">
+                        <div class="foods">
+                          <div class="col-images">
+                          <img class="image" src="Images-Foodmandu/Untitled_design_-_2024-06-10T160909_100624102433.920.png">
+                          </div>
+                          <h3 class="title">4 Corners - Detroit Style Pizza</h3>
+                        </div>
+                        </div>
+                        <div class="food-row">
+                        <div class="foods">
+                          <div class="col-images">
+                            <img class="image" src="Images-Foodmandu/2_151222080951._fire-and-ice-web.listing.jpg">
+                            </div>
+                            <h3 class="title">Fire And Ice Pizzeria - Thamel</h3>
+                          </div>
+                          </div>
+                          <div class="food-row">
+                          <div class="foods">
+                            <div class="col-images">
+                            <img class="image" src="Images-Foodmandu/Untitled_design_-_2024-06-11T112136_110624053658.455.png">
+                            </div>
+                            <h3 class="title">The Workshop Eatery - Bakhundole</h3>
+                          </div>
+                          </div>
+                          <div class="food-row">
+                          <div class="foods">
+                            <div class="col-images">
+                            <img class="image" src="Images-Foodmandu/Untitled_design_-_2024-06-10T172330_100624113837.765.png">
+                            </div>
+                            <h3 class="title">Le Trio - Jhamsikhel</h3>
+                          </div>
+                          </div>
+                          <div class="food-row">
+                          <div class="foods">
+                            <div class="col-images">
+                            <img class="image" src="Images-Foodmandu/4_151222081130_150424053129._burger-shack-web-listing.jpg">
+                            </div>
+                            <h3 class="title">Burger Shack - Jawalakhel</h3>
+                          </div>
+                          </div>
+                          <div class="food-row">
+                          <div class="foods">
+                            <div class="col-images">
+                            <img class="image" src="Images-Foodmandu/Untitled_design_-_2024-06-10T152425_100624095135.059.png">
+                            </div>
+                            <h3 class="title">Koto Restaurant - Durbarmarge</h3>
+                          </div>
+                          </div>
+                          <div class="food-row">
+                          <div class="foods">
+                            <div class="col-images">
+                            <img class="image" src="Images-Foodmandu/8_151222081509._ktm-marritot-web.listing.jpg">
+                            </div>
+                            <h3 class="title">Kathmandu Marriott</h3>
+                          </div>
+                          </div>
+                          <div class="food-row">
+                          <div class="foods">
+                            <div class="col-images">
+                            <img class="image" src="Images-Foodmandu/4_151222081130_150424053129._burger-shack-web-listing.jpg">
+                            </div>
+                            <h3 class="title">Burger Shack - Kamaladi</h3>
+                          </div>
+                          </div>
+                      </div>
+                </div>
+            </section>
+            <br>
+            <!-- ===============================================END__OF__FEATURED___RESTURANT___SECTION============================ -->
+
+             <!-- ====================================SPECIAL___DEALS____SECTION========================================================== -->
+            <section class="Section-4" style="border: 1px solid #E7E7E7;border-width: 1px 0 0 0;width:100%">
+              <div class="container-1">
+                  <div class="rows">
+                    <div class="inline">
+                      <h1 class="two-line">SPECIAL DEALS</h1>
+                        <small class="float-right">
+                          <a href=".view-all2.html" style="color:black;">
+                            View all
+                            <span class="icomoon-icon-arrow-forward">
+                              <i class="fa-solid fa-arrow-right" style="color: black;"></i>
+                            </span> <!-- move the href attribute to this anchor tag -->
+                        </a>
+                        </small>
+                      </div>
+                    <div class="food-row">
+                      <div class="foods">
+                        <div class="col-images">
+                        <img class="image" src="Images-Foodmandu/WebListing_(2)_240524121514.jpg">
+                        </div>
+                        <h3 class="title">Fusion Flavours</h3>
+                      </div>
+                      </div>
+                      <div class="food-row">
+                      <div class="foods">
+                        <div class="col-images">
+                          <img class="image" src="Images-Foodmandu/friendship_cafe_web_listing_240624055232.png">
+                          </div>
+                          <h3 class="title">Friendship Cafe</h3>
+                        </div>
+                        </div>
+                        <div class="food-row">
+                        <div class="foods">
+                          <div class="col-images">
+                          <img class="image" src="Images-Foodmandu/WebListing_220524061427.png">
+                          </div>
+                          <h3 class="title">Mom's Kitchen Restaurant</h3>
+                        </div>
+                        </div>
+                        <div class="food-row">
+                          <div class="foods">
+                            <div class="col-images">
+                            <img class="image" src="Images-Foodmandu/Untitled_design_-_2024-06-10T155430_100624101002.692.png">
+                            </div>
+                            <h3 class="title">Bricks Cafe Firewood Pizza</h3>
+                          </div>
+                          </div>
+                        
+                          <div class="food-row">
+                            <div class="foods">
+                              <div class="col-images">
+                              <img class="image" src="Images-Foodmandu/Untitled_design_-_2024-06-25T120917_250624062442.054.png">
+                              </div>
+                              <h3 class="title">Yasumi Japanese Restaurant</h3>
+                            </div>
+                            </div>
+                            <div class="food-row">
+                              <div class="foods">
+                                <div class="col-images">
+                                <img class="image" src="Images-Foodmandu/web_050822063015.listing-newari-kitchen.jpg">
+                                </div>
+                                <h3 class="title">Newari Kitchen</h3>
+                              </div>
+                              </div>
+                        <div class="food-row">
+                        <div class="foods">
+                          <div class="col-images">
+                          <img class="image" src="Images-Foodmandu/Untitled_design_-_2024-06-11T175328_110624120946.449.png">
+                          </div>
+                          <h3 class="title">Valley Xpress-Bharatpur</h3>
+                        </div>
+                        </div>
+                        <div class="food-row">
+                        <div class="foods">
+                          <div class="col-images">
+                          <img class="image" src="Images-Foodmandu/web_071123064928.listing-pizza-planet.jpg">
+                          </div>
+                          <h3 class="title">Pizza Planet Mid-baneshwor</h3>
+                        </div>
+                        </div>
+                    </div>
+              </div>
+          </section>
+          <!-- ==========================================END__OF__SPECIAL___DEALS____SECTION============================================ -->
+
+          <!-- ==========================================About__US======================================================================== -->
+          <section class="Section-5">
+            <div class="overlay">
+            <div class="container-2">
+            <div class="bg-txt">
+              <h1>About Us</h1>
+              <p>Foodmandu is the fastest, easiest and most convenient way to enjoy the best food of your 
+                favourite restaurants at home,
+                 at the office or wherever you want to.</p>
+                 <p>We know that your time is valuable and sometimes every minute in the day counts.
+                   That's why we deliver! So you can spend more time doing the things you love.</p>
+                   <a href="aboutus.html">
+                   <button class="button">LEARN MORE</button>
+                   </a>
+            </div>
+          </div> 
+        </div> 
+          </section>
+          <br>
+          <!-- ==================================END__OF__ABOUT___US==================================================================== -->
+          
+          <!-- =======================================START--OF--SLIDER---SECTION======================================================= -->
+          <section class="Section-6">
+            <div class="container-3">
+              <div class="row">
+                <div class="slide">
+                  <div>
+                  <h1 class="red">
+                    <b>Download the app</b>
+                  </h1>
+                  <p>Always on the go</p>
+                  <p>Food - whenever and wherever you want it!</p>
+                  <a class="itunes-app-store-logo"href="https://itunes.apple.com/np/app/foodmandu/id983591001">
+                    <img class="side-img-1" src="Images-Foodmandu/itunes-app-store-logo.png" alt="download-logo">
+                  </a>
+                  <a class="google-play-store-logo" href="https://play.google.com/store/apps/details?id=com.app.foodmandu">
+                    <img class="side-img-2" src="Images-Foodmandu/google-play-store-logo.png" alt="download-logo">
+                  </a>
+                  </div>
+                </div>
+                <div class="slider-image">
+                  <img class="side-img-3"src="Images-Foodmandu/download_app_frame.png" alt="download_app_frame">
+                </div>
+              </div>
+            </div>
+            </section>
+          </section>
+          <br>
+
+          <!-- =================================END ---OF ---SLIDER---SECTION ================================================================ -->
+
+          <section class="Section-7">
+            <div class="container-4">
+               <div class="row-2">
+                <div class="space1">
+                  &nbsp;
+                </div> 
+                <div class="text-area">
+                <div class="TextBox">
+                  <div class="inner-content"style="text-align:justify">
+                  <h2 style="text-align: center;">
+                  <b class="texts">
+                    List your Restaurant at Foodmandu!
+                    <br>
+                    Reach 2,00,000 + new customers.
+                  </b>
+                  </h2>
+                  </div>
+                  </div>
+                  <br>
+                  <div class="request">
+                    <a href="Second-form.html">
+                    <button class="btn">Send a request</button>
+                    </a>
+                  </div>
+                  </div>
+                  <div class="space2"> 
+                    &nbsp;
+                  </div>
+                  </div>
+                  </div>
+                  </section>
+
+                  <!-- =========================================FOOTERS----SECTION==================================================== -->
+                   <footer class="footer">
+                    <div class="container-f">
+                      <div class="row-f">
+                        <div class="f-menu">
+                            <ul class="f-list" style="list-style: none;">
+                            <li><h3 class="s-title">WE'RE FOODMANDU</h3></li>
+                            <li>About Us</li>
+                            <li>Available Areas</li>
+                            <li>Delivery Charges</li>
+                            <li>Blog</li>
+                            </ul>
+                            <p><br></p>
+                            <h3 class="s-title">SERVICE HOUR</h3>
+                            <span style="font-size: 80%;">08:00 AM to 9:00 PM (NST)</span>
+                            <p></p>
+                          </div>
+                          <div class="f-menu-2">
+                            <ul class="f-list" style="list-style: none;">
+                              <li><h3 class="s-title">GET HELP</h3></li>
+                              <li>How to Order?</li>
+                              <li>FAQs</li>
+                              <li>Contact Us</li>
+                            </ul>
+                          </div>
+                          <div class="f-menu-3">
+                            <ul clas="f-list" style="list-style: none;margin-top:0px;">
+                              <li><h3 class="s-title">CALL US</h3></li>
+                              <li>Kathmandu: 5970477, 4544177, 4540979, 9802034008</li>
+                              <li><h3 class="s-title">CALL US</h3></li>
+                              <li>Pokhara: 9802859990, 9802853330</li>
+                            </ul>
+                          </div>
+                          <div class="f-menu-4">
+                            <h3 class="s-title-l">DOWNLOAD APP</h3>
+                            <div class="flex-section">
+                            <a href="https://itunes.apple.com/np/app/foodmandu/id983591001"><img class="itunes" src="Images-Foodmandu/itunes-app-store-logo.png" alt="" class="download-logo"></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.app.foodmandu"><img class="google-play"src="Images-Foodmandu/google-play-store-logo.png" alt="" class="download-logo"></a>
+                            </div>
+                            <div class="links">
+                              <div class="s-title">CONNECT WITH US</div>
+                              <br>
+                              <a href="https://www.facebook.com/foodmandu" target="_blank" title="Facebook"><span class="icon-facebook"><i class="fa-brands fa-square-facebook"></i></span></a>
+                              <a href="https://twitter.com/foodmandu" target="_blank" title="Twitter"><span class="icon-twitter"><i class="fa-brands fa-x-twitter"></i></span></a>
+                              <a href="https://www.instagram.com/foodmandu/" target="_blank" title="instagram"><span class="icon-instagram"><i class="fa-brands fa-instagram"></i></span></a>
+                              <a href="https://blog.foodmandu.com/" target="_blank" title="blog"><span style="font-size:150%; margin: 0px 2px;" class="icon-blogger"><i class="fa-brands fa-blogger-b"></i></span></a>
+                              <a href="https://www.youtube.com/channel/UCDf_rtJmXYSC08spCjoGDlQ" target="_blank" title="Youtube"><span class="icon-youtube"><i class="fa-brands fa-youtube"></i></span></a>
+                            </div>
+                            </div>
+                            <div class="last-footer">
+                              <hr>
+                              <ul class="inline">
+                                <li class="inline-item">
+                                  <a class="link-i" href="/Home/TermsOfUse">Terms of Usage</a>
+                                </li>
+                                |
+                                <li class="inline-item">
+                                  <a class="link-i"href="/Home/PrivacyPolicy"> Privacy Policy</a>
+                                </li>
+                                <li class="list-inline-item">© 2020 Foodmandu Pvt. Ltd. All Rights Reserved.</li>
+                                </ul>
+                              </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                   </footer>
+                   <!-- ===========ARROW---SECTION=================================== -->
+                   <!-- <a href="javascript:" id="return-to-top" style="display: none;">
+                    <span class="icomoon icon-arrow-forward">
+                      <i class="fa-solid fa-arrow-up"></i>
+                    </span></a> -->
+
+                    <button onclick="topFunction()" id="myBtn" title="Go to top" style="scroll-behavior: smooth;  transition: all 0.17s ease-in-out;">
+                      <i class="fa-solid fa-right-long"></i>                    </button>
+                    <script>
+                      let mybutton = document.getElementById("myBtn");
+
+                  // When the user scrolls down 20px from the top of the document, show the button
+                    window.onscroll = function() {scrollFunction()};
+
+                  function scrollFunction() {
+                  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                  mybutton.style.display = "block";
+                 } else {
+                 mybutton.style.display = "none";
+                }
+                }
+
+              // When the user clicks on the button, scroll to the top of the document
+              function topFunction() {
+              document.body.scrollTop = 0; // For Safari
+              document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+              }
+            </script>
+  </body>
+</html>

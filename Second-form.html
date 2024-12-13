@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="Second-form.css">
+</head>
+<body>
+      <!-- =================================START ----OF-----REQUEST-----SECTION============================================ -->
+      <div class="model-window"id="myModal">
+      <div class="modal-dialog">
+        <div class="model-content">
+          <div class="container-learn">
+            <div class="modal-action-cancel">
+                <a href="foodmandu.html">
+                    &times;
+                    </a>
+            </div>
+              <div class="modal-header">
+                <div class="model-row">
+                  <div class="model-text">
+                    <div class="modal-title">
+                      <h3 class="model-t-1">Get listed in Foodmandu</h3>
+                      <p class="p-1">Please fill up your details.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <form action="" class="enquiry-form">
+                  <div class="row-spinner">
+                    <div class="form-group">
+                      <label class="model-st">
+                        YOUR NAME
+                      </label>
+                      <span style="color:red;" title="Your name is required">*</span>
+                      <input type="text" name="name" class="one" placeholder="Your Name" >
+                    </div>
+                  
+
+                  
+                    <div class="form-group">
+                      <label class="model-st">
+                        RESTAURANT/STORE NAME
+                      </label>
+                      <span style="color:red;" title="Stores name is required">*</span>
+                      <input type="text" name="name" class="one" placeholder="your resturant/store name" >
+                    </div>
+                  
+
+                  
+                    <div class="form-group">
+                      <label class="model-st">
+                        EMAIL ADDRESS
+                      </label>
+                      <span style="color:red;" title="Your email is required">*</span>
+                      <input type="email" name="name" class="one" placeholder="you@yourname" >
+                    </div>
+                  
+
+                  
+                    <div class="form-group">
+                      <label class="model-st">
+                        CONTACT NUMBER
+                      </label>
+                      <span style="color:red;" title="Your contact is required">*</span>
+                      <input type="text" name="name" class="one" placeholder="98xxxxxxxx" >
+                    </div>
+                </div>
+
+                  
+                    <div class="form-group-2">
+                      <label class="model-st-1">
+                        DETAILS 
+                      </label>
+                      <span style="color:red;" title="Your details is required">*</span>
+                      <textarea class="txt-area" type="text" rows="7"name="txt-area" placeholder="Your details here"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12">
+                    <button type="submit" class="btn-block">Send Message</button>
+                </div>
+                
+                </form>
+              </div>
+          </div>
+        </div>
+       </div>
+       <script>
+        // Get the form element
+        const form = document.querySelector('.enquiry-form');
+    
+        // Add event listener to the form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent default form submission
+    
+            // Get the input fields
+            const nameInput = document.querySelector('input[name="name"]');
+            const restaurantNameInput = document.querySelector('input[name="restaurant-name"]');
+            const emailInput = document.querySelector('input[name="email"]');
+            const contactNumberInput = document.querySelector('input[name="contactNumber"]');
+            const detailsInput = document.querySelector('textarea[name="details"]');
+    
+            // Reset the error messages
+            const nameError = document.querySelector('.form-group.error');
+            const restaurantNameError = document.querySelector('.form-group.error');
+            const emailError = document.querySelector('.form-group.error');
+            const contactNumberError = document.querySelector('.form-group.error');
+            const detailsError = document.querySelector('.form-group-2.error');
+    
+            nameError.textContent = '';
+            restaurantNameError.textContent = '';
+            emailError.textContent = '';
+            contactNumberError.textContent = '';
+            detailsError.textContent = '';
+    
+            // Validate name
+            if (!nameInput.value) {
+                nameError.textContent = 'Name is required';
+                nameInput.style.borderColor = 'red';
+                return;
+            } else {
+                nameInput.style.borderColor = 'black';
+            }
+    
+            // Validate restaurant name
+            if (!restaurantNameInput.value) {
+                restaurantNameError.textContent = 'Restaurant/Store name is required';
+                restaurantNameInput.style.borderColor = 'red';
+                return;
+            } else {
+                restaurantNameInput.style.borderColor = 'black';
+            }
+    
+            // Validate email
+            if (!validateEmail(emailInput.value)) {
+                emailError.textContent = 'Invalid email address';
+                emailInput.style.borderColor = 'red';
+                return;
+            } else {
+                emailInput.style.borderColor = 'black';
+            }
+    
+            // Validate contact number
+            if (!validateContactNumber(contactNumberInput.value)) {
+                contactNumberError.textContent = 'Invalid contact number';
+                contactNumberInput.style.borderColor = 'red';
+                return;
+            } else {
+                contactNumberInput.style.borderColor = 'black';
+            }
+    
+            // Validate details
+            if (!detailsInput.value) {
+                detailsError.textContent = 'Details are required';
+                detailsInput.style.borderColor = 'red';
+                return;
+            } else {
+                detailsInput.style.borderColor = 'black';
+            }
+    
+            // If validation passes, submit the form
+            form.submit();
+        });
+    
+        // Email validation function
+        function validateEmail(email) {
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return emailRegex.test(email);
+        }
+    
+        // Contact number validation function
+        function validateContactNumber(contactNumber) {
+            const contactNumberRegex = /^[0-9]{10}$/;
+            return contactNumberRegex.test(contactNumber);
+        }
+    </script>
+      <br>
+</body>
+</html>
